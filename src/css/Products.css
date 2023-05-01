@@ -1,0 +1,70 @@
+.productsCard {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 380px;
+    border: 2px solid red;
+    margin: 5px;
+}
+
+.imgProduct {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.nameProductSmall {
+    font-size: 12px;
+    margin: auto;
+}
+
+.nameProductBig {
+    font-size: 14px;
+    margin: auto;
+}
+
+.soldQtyProduct {
+    font-size: 8px;
+    margin: auto;
+    position: relative;
+    bottom: 0;
+}
+
+.priceProduct {
+    font-size: 16px;
+    color: green;
+}
+
+.conditionNew {
+    font-size: 16px;
+    color: green;
+    position: relative;
+    top: 0;
+}
+
+.conditionUsed {
+    font-size: 16px;
+    color: red;
+    position: relative;
+    top: 0;
+}
+
+.containerPriceSold {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    position: relative;
+    bottom: 0;
+}
+
+.divProductsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+.divCategories {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+}
+
+.btnCategories {
+    width: 200px;
+    padding-block: 5px;
+}

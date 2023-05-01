@@ -1,0 +1,55 @@
+.header {
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.divSearchBar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSearch {
+    padding: 2px;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: cadetblue;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.searchBar {
+    height: 30px;
+    width: 500px;
+}
+
+.divIconsMenu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

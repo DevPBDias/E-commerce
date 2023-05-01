@@ -1,0 +1,24 @@
+.divHome {
+    background-color: #C1DCDC;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.titleHome {
+font-size: 28px;
+
+}
+
+.inputUser {
+
+}
+
+.btnHome {
+    
+}
