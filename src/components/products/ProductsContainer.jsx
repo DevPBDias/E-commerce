@@ -10,7 +10,7 @@ function ProductsContainer() {
   return (
     <div className="divProductsContainer">
       {
-        products && products?.map((item) => (
+        products?.map((item) => (
           <Link key={item.id} to={`/product/${item.id}`}>
             <ProductCard
               soldQty={item.sold_quantity}

@@ -2,14 +2,28 @@
 import React, { useContext, useState } from 'react';
 import lupa from '../../assets/lupa.png';
 import productContext from '../../context/Context';
+import { getProductsFromCategoryAndQuery, getProductsFromQuery } from '../../services/productsApi';
 
 function SearchBar() {
-  const [product, setProduct] = useState('');
-  const { categories } = useContext(productContext);
-  console.log(categories);
+  const [productName, setProductName] = useState('');
+  const { setProducts, categoryId } = useContext(productContext);
 
-  const handleClick = () => {
-    console.log('handleClick');
+  const readProductsWithCategory = async (id, query) => {
+    const data = await getProductsFromCategoryAndQuery(id, query);
+    setProducts(data.results);
+  };
+
+  const readProductsWithoutCategory = async (query) => {
+    const data = await getProductsFromQuery(query);
+    setProducts(data.results);
+  };
+
+  const handleClick = async () => {
+    if (categoryId) {
+      await readProductsWithCategory(categoryId, productName);
+    } else {
+      await readProductsWithoutCategory(productName);
+    }
   };
 
   return (
@@ -17,9 +31,9 @@ function SearchBar() {
       <input
         type="text"
         className="searchBar"
-        value={product}
+        value={productName}
         placeholder="Digite o produto que deseja procurar"
-        onChange={({ target }) => setProduct(target.value)}
+        onChange={({ target }) => setProductName(target.value)}
       />
       <button
         type="button"

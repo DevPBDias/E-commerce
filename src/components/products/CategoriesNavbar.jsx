@@ -4,7 +4,7 @@ import { getProductsFromCategoryAndQuery } from '../../services/productsApi';
 import '../../css/CategoriesNavbar.css';
 
 function CategoriesNavbar() {
-  const { categories, setProducts } = useContext(productContext);
+  const { categories, setProducts, setCategoryId } = useContext(productContext);
 
   const readProducts = async (categoryId) => {
     const data = await getProductsFromCategoryAndQuery(categoryId);
@@ -13,6 +13,7 @@ function CategoriesNavbar() {
 
   const handleCategories = async ({ target }) => {
     await readProducts(target.id);
+    await setCategoryId(target.id);
   };
 
   return (

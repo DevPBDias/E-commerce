@@ -6,9 +6,9 @@ import { getCategories } from '../services/productsApi';
 
 function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
-  const [user, setUser] = useState({});
+  const [cart, setCart] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [cartBulls, setCartBulls] = useState([]);
+  const [categoryId, setCategoryId] = useState('');
 
   useEffect(() => {
     const readCategories = async () => {
@@ -23,11 +23,11 @@ function ProductProvider({ children }) {
     setProducts,
     categories,
     setCategories,
-    cartBulls,
-    setCartBulls,
-    user,
-    setUser,
-  }), [user, products, categories, cartBulls]);
+    categoryId,
+    setCategoryId,
+    cart,
+    setCart,
+  }), [cart, products, categories, categoryId]);
 
   return (
     <ProductContext.Provider value={value}>

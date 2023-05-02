@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Title from '../components/Title';
+import Title from '../components/utils/Title';
 import '../css/Home.css';
 
 function Home() {
