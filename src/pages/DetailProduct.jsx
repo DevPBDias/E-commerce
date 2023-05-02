@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import CounterProduct from '../components/details/CounterProduct';
 import DetailsProductCard from '../components/details/DetailsProductCard';
 import { getProductByID } from '../services/productsApi';
+import '../css/DetailProduct.css';
 
 function DetailProduct() {
   const { id } = useParams();
@@ -11,14 +12,13 @@ function DetailProduct() {
   useEffect(() => {
     const readProductById = async () => {
       const data = await getProductByID(id);
-      console.log(data);
       setInfoProduct(data);
     };
     readProductById();
   }, []);
 
   return (
-    <div>
+    <div className="detailContainer">
       <DetailsProductCard
         category={infoProduct?.category}
         warranty={infoProduct?.warranty}

@@ -2,6 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import propTypes from 'prop-types';
+import '../../css/DetailProduct.css';
 
 function DetailsProductCard({
   name, soldQty, price, image, category, warranty,
@@ -13,13 +14,13 @@ function DetailsProductCard({
 
   return (
     <div className="detailsCard">
-      <img src={image} alt="" className="" />
+      <img src={image} alt="product" className="productImg" />
       <div className="infoTextContainer">
         <p>{name}</p>
         <p>{category}</p>
         <p>{`${formatter.format(price)}`}</p>
-        <p>{warranty}</p>
-        <p>{soldQty <= 1 ? `${soldQty} vendido` : `${soldQty} vendidos` }</p>
+        <p className="soldQty">{warranty}</p>
+        <p className="soldQty">{soldQty <= 1 ? `${soldQty} vendido` : `${soldQty} vendidos` }</p>
       </div>
     </div>
   );
